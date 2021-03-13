@@ -1,54 +1,53 @@
-// alert("Hello, World !");
-// console.log("Hello, World !");
-// console.log("Hello, World !");
-// console.log("Hello, World !");
-
 let num = 5;
+// console.log(2 + 3);
+// console.log(7 - 3);
+// console.log(5 * 8);
+// console.log(60 / 3);
+// console.log(10 % 3); // Определяет остаток
+// console.log(num - 3);
 
-let string = "Bob";
-let string2 = "Привет, Друг!";
-let template = `Список дел на сегодня:
-Покормить кота
-Поесть самому
-Помыть потолок`;
-let template2 = `Hello, ${string}!`;
+// ДЕКРЕМЕНТ префиксный и постфиксный
+console.log(--num); // (4) Сначала декремент переменной, а затем выполнение функции
+console.log(num); // (4) Выполнение функции с переменной (у которой новое значение)
 
-let bul = true;
-let lie = false;
+console.log(num--); // (4) Сначала выполнение функции, а затем декремент переменной
+console.log(num); // (3) Выполнение функции с измененной переменной
 
-let und; // undefined - тип несуществующего элемента массива или переменной без значения
-// let bigInt = 25002195224663795555555n; jshint ругается на эту переменную
-let symbol = Symbol();
+// Аналогично префиксный и постфиксный инкремент (обозначается ++)
 
-let donutHole = null; // пустота, обнулённая функция
+// СТРОКИ. Конкатенация
 
-let object = {
-	// ключ (объект): значение,
-	a: 5,
-	b: "javascript",
-	c: false,
-	d: {
-		d: 10,
-		e: 15,
-	},
-	z: [1, 2, 3],
-};
-object.x = ["a", "b", "c"]; // создается элемент массива с ключом х
+// let string = "Привет, Мир!";
+// console.log(string + " Хорошая погода!");
 
-// Возможны как точка, так и квадратные скобки [] (но объект при этом должен оформляться в "")
-// Но нотация с точкой предпочтительней (jshint не ругается)
-console.log(object.z);
-console.log(object["z"]);
-console.log(object);
+let string = "5";
+console.log(+string + +"10"); // (15) Унарный плюс перед строкой переводит строку в число
 
-let array = [1, "b", { a: 1, b: "Hello" }, true];
-console.log(array); // обращение ко всему массиву
-console.log(array[2]); // обращение к 3 элементу массива
+// ОПЕРАТОРЫ СРАВНЕНИЯ
+++num;
+++num;
+/*
+console.log(num === 5); // (true)
+console.log(num >= 3); // (true)
+console.log(num < 3); // (false)
+*/
 
-let func = function () {};
+// СТРОГОЕ И НЕСТРОГОЕ РАВЕНСТВО
+/*
+console.log(num === string); // (false) При проверке типов переменных число 5 не равно строке '5'
+console.log(num == string); // (true)  Сравнение типов переменных не проводится
+*/
 
-let regExp = /D/g;
-let error = new Error();
-let data = new Date();
-let map = new Map();
-let set = new Set();
+// СТРОГОЕ И НЕСТРОГОЕ НЕРАВЕНСТВО
+/*
+console.log(num !== string); // (true) Строго число 5 не равно строке '5'
+console.log(num != string); // (false) Не строго (без сравнения типов данных 5 = '5')
+*/
+
+// ПРИСВАИВАНИЕ С ОПЕРАЦИЕЙ
+num += 3; // (8)  num = num + 3;
+num -= 2; // (6)  num = num - 2;
+num *= 6; // (36) num = num * 6;
+num /= 3; // (12) num = num / 3;
+
+console.log(num);
